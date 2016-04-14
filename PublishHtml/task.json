@@ -1,0 +1,40 @@
+{
+    "id": "81CE8528-2265-46AE-BFAD-24248697E4F4",
+    "name": "PublishHtml",
+    "friendlyName": "Publish HTML Artifact",
+    "description": "Publish HTML artifact to VSTS/TFS",
+    "helpMarkDown": "[More Information](http://www.github.com/johnwalley/vsts-publish-html)",
+    "category": "Build",
+    "visibility": [
+        "Build"
+    ],
+    "author": "John Walley",
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 4
+    },
+    "demands": [],
+    "minimumAgentVersion": "1.90.0",
+    "instanceNameFormat": "Publish HTML Artifact",
+    "inputs": [
+        {
+            "name": "fileLocation",
+            "type": "string",
+            "label": "HTML Artifact",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "Path of an HTML artifact. For example, $(Build.SourcesDirectory)/summary.html"
+        }
+    ],
+    "execution": {
+        "PowerShell": {
+            "target": "$(currentDirectory)\\PublishHtml.ps1",
+            "argumentFormat": "",
+            "workingDirectory": "$(currentDirectory)",
+            "platforms": [
+                "windows"
+            ]
+        }
+    }
+}

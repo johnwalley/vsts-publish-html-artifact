@@ -1,0 +1,13 @@
+{
+  "name": "vsts-publish-html-artifact",
+  "version": "0.2.1",
+  "description": "Display an HTML artifact in a build tab",
+  "main": "index.js",
+  "scripts": {
+    "test": "tfx extension create --manifest-globs vss-extension.json"
+  },
+  "author": "John Walley",
+  "devDependencies": {
+    "tfx-cli": "^0.3.19"
+  }
+}

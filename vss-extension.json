@@ -1,0 +1,99 @@
+{
+  "manifestVersion": 1,
+  "id": "publish-html-artifact",
+  "version": "0.2.5",
+  "name": "Publish HTML Artifact",
+  "description": "Display an HTML artifact in a build tab",
+  "publisher": "johnwalley",
+  "icons": {
+    "default": "images/logo.png"
+  },
+  "categories": [
+    "Build and release"
+  ],
+  "tags": [
+    "HTML",
+    "artifact",
+    "publish"
+  ],
+  "content": {
+    "details": {
+      "path": "overview.md"
+    },
+    "license": {
+      "path": "license-terms.md"
+    }
+  },
+  "screenshots": [{
+    "path": "images/screenshot-1.png"
+  }],
+  "links": {
+    "home": {
+      "uri": "http://www.github.com/johnwalley/vsts-publish-html"
+    },
+    "getstarted": {
+      "uri": "http://www.github.com/johnwalley/vsts-publish-html"
+    },
+    "learn": {
+      "uri": "http://www.github.com/johnwalley/vsts-publish-html"
+    },
+    "repository": {
+      "uri": "http://www.github.com/johnwalley/vsts-publish-html"
+    },
+    "issues": {
+      "uri": "http://www.github.com/johnwalley/vsts-publish-html/issues"
+    }
+  },
+  "targets": [{
+    "id": "Microsoft.VisualStudio.Services"
+  }],
+  "contributions": [{
+    "id": "publish-html-build-task",
+    "type": "ms.vss-distributed-task.task",
+    "targets": [
+      "ms.vss-distributed-task.tasks"
+    ],
+    "properties": {
+      "name": "PublishHtml"
+    }
+  }, {
+    "id": "publish-html-hub",
+    "type": "ms.vss-build-web.build-results-tab",
+    "description": "A tab displaying an HTML artifact",
+    "targets": [
+      "ms.vss-build-web.build-results-view"
+    ],
+    "properties": {
+      "name": "HTML Artifact",
+      "order": 99,
+      "uri": "html-artifact.html"
+    }
+  }],
+  "scopes": [
+    "vso.build",
+    "vso.build_execute",
+    "vso.code",
+    "vso.code_write",
+    "vso.code_manage",
+    "vso.test",
+    "vso.test_write",
+    "vso.work",
+    "vso.work_write"
+  ],
+  "files": [{
+    "path": "html-artifact.html",
+    "addressable": true
+  }, {
+    "path": "Hub/dist",
+    "addressable": true
+  }, {
+    "path": "PublishHtml",
+    "addressable": true
+  }, {
+    "path": "sdk/scripts",
+    "addressable": true
+  }, {
+    "path": "images",
+    "addressable": true
+  }]
+}

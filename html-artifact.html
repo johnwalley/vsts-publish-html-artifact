@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>HTML Artifact</title>
+  <script src="sdk/scripts/VSS.SDK.js"></script>
+</head>
+
+<body>
+  <script type="text/javascript">
+    VSS.init({
+      usePlatformScripts: true,
+      moduleLoaderConfig: {
+        paths: {
+          "scripts": "Hub/dist"
+        }
+      }
+    });
+    VSS.ready(function() {
+      require(["scripts/tab"], function() {});
+    });
+  </script>
+  <style>
+    html {
+      height=100%;
+    }
+
+    body {
+      height=100%;
+    }
+
+    .html-artifact {
+      height: 100%;
+      overflow:auto;
+    }
+  </style>
+  <div class="html-artifact"></div>
+</body>
+
+</html>
