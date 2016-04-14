@@ -1,9 +1,9 @@
 {
   "manifestVersion": 1,
   "id": "publish-html-artifact",
-  "version": "0.2.16",
+  "version": "0.2.17",
   "name": "Publish HTML Artifact",
-  "description": "Display an HTML artifact in a build tab",
+  "description": "Display any HTML artifact in VSTS or TFS",
   "publisher": "johnwalley",
   "icons": {
     "default": "images/logo.png"
@@ -29,19 +29,16 @@
   }],
   "links": {
     "home": {
-      "uri": "http://www.github.com/johnwalley/vsts-publish-html"
+      "uri": "http://www.github.com/johnwalley/vsts-publish-html-artifact"
     },
     "getstarted": {
-      "uri": "http://www.github.com/johnwalley/vsts-publish-html"
-    },
-    "learn": {
-      "uri": "http://www.github.com/johnwalley/vsts-publish-html"
+      "uri": "https://github.com/johnwalley/vsts-publish-html-artifact#get-started"
     },
     "repository": {
-      "uri": "http://www.github.com/johnwalley/vsts-publish-html"
+      "uri": "http://www.github.com/johnwalley/vsts-publish-html-artifact"
     },
     "issues": {
-      "uri": "http://www.github.com/johnwalley/vsts-publish-html/issues"
+      "uri": "http://www.github.com/johnwalley/vsts-publish-html-artifact/issues"
     }
   },
   "targets": [{

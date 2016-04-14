@@ -4,4 +4,10 @@
 
 Publish any HTML artifact in VSTS or TFS.
 
-Take a look at the [VSTS Marketplace Listing](https://marketplace.visualstudio.com/items?itemName=johnwalley.publish-html-artifact).
+Install or download from the [VSTS Marketplace](https://marketplace.visualstudio.com/items?itemName=johnwalley.publish-html-artifact).
+
+## Get Started
+
+1. Install the extension
+2. Add a Publish HTML Artifact task to your build definitions
+3. Enter the location of the HTML artifact you wish to display
