@@ -44,12 +44,14 @@ export class InfoTab extends Controls.BaseControl {
                      frameborder: '0',
                      width: '100%',
                      height: '100%',
-                     scrolling: 'no',
+                     scrolling: 'yes',
                      marginheight: '0',
                      marginwidth: '0'
                    });
 
                   this._element.replaceWith(el);
+
+                  VSS.resize();
                 })
               }
             });
