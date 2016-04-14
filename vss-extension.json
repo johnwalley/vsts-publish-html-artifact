@@ -1,7 +1,7 @@
 {
   "manifestVersion": 1,
   "id": "publish-html-artifact",
-  "version": "0.2.17",
+  "version": "0.2.19",
   "name": "Publish HTML Artifact",
   "description": "Display any HTML artifact in VSTS or TFS",
   "publisher": "johnwalley",

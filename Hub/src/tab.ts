@@ -20,7 +20,7 @@ export class InfoTab extends Controls.BaseControl {
         this._initBuildInfo(build);
 
         var taskClient = DT_Client.getClient();
-        taskClient.getPlanAttachments(vsoContext.project.id, "build", build.orchestrationPlan.planId, "Distributedtask.Core.Summary").then((taskAttachments) => {
+        taskClient.getPlanAttachments(vsoContext.project.id, "build", build.orchestrationPlan.planId, "JohnWalley.html_artifact").then((taskAttachments) => {
           if (taskAttachments.length == 0) {
             var element = $("<div />");
 
@@ -34,7 +34,7 @@ export class InfoTab extends Controls.BaseControl {
                 var link = taskAttachment._links.self.href;
                 var attachmentName = taskAttachment.name;
 
-                taskClient.getAttachmentContent(vsoContext.project.id, "build", build.orchestrationPlan.planId, taskAttachment.timelineId, taskAttachment.recordId, "Distributedtask.Core.Summary", taskAttachment.name).then((attachmentContent) => {
+                taskClient.getAttachmentContent(vsoContext.project.id, "build", build.orchestrationPlan.planId, taskAttachment.timelineId, taskAttachment.recordId, "JohnWalley.html_artifact", taskAttachment.name).then((attachmentContent) => {
 
                   var text = new TextDecoder('utf-8').decode(new Uint8Array(attachmentContent));
 

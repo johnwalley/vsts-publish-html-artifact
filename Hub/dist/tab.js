@@ -20,7 +20,7 @@ define(["require", "exports", "VSS/Controls", "TFS/DistributedTask/TaskRestClien
                 sharedConfig.onBuildChanged(function (build) {
                     _this._initBuildInfo(build);
                     var taskClient = DT_Client.getClient();
-                    taskClient.getPlanAttachments(vsoContext.project.id, "build", build.orchestrationPlan.planId, "Distributedtask.Core.Summary").then(function (taskAttachments) {
+                    taskClient.getPlanAttachments(vsoContext.project.id, "build", build.orchestrationPlan.planId, "JohnWalley.html_artifact").then(function (taskAttachments) {
                         if (taskAttachments.length == 0) {
                             var element = $("<div />");
                             var errorText = "No HTML artifact is available";
@@ -32,7 +32,7 @@ define(["require", "exports", "VSS/Controls", "TFS/DistributedTask/TaskRestClien
                                 if (taskAttachment._links && taskAttachment._links.self && taskAttachment._links.self.href) {
                                     var link = taskAttachment._links.self.href;
                                     var attachmentName = taskAttachment.name;
-                                    taskClient.getAttachmentContent(vsoContext.project.id, "build", build.orchestrationPlan.planId, taskAttachment.timelineId, taskAttachment.recordId, "Distributedtask.Core.Summary", taskAttachment.name).then(function (attachmentContent) {
+                                    taskClient.getAttachmentContent(vsoContext.project.id, "build", build.orchestrationPlan.planId, taskAttachment.timelineId, taskAttachment.recordId, "JohnWalley.html_artifact", taskAttachment.name).then(function (attachmentContent) {
                                         var text = new TextDecoder('utf-8').decode(new Uint8Array(attachmentContent));
                                         var el = $('<iframe>', {
                                             srcdoc: text,
