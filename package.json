@@ -9,5 +9,8 @@
   "author": "John Walley",
   "devDependencies": {
     "tfx-cli": "^0.3.19"
+  },
+  "dependencies": {
+    "text-encoding": "^0.6.0"
   }
 }
