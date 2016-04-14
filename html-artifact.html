@@ -3,11 +3,19 @@
 
 <head>
   <title>HTML Artifact</title>
-  <script src="sdk/scripts/VSS.SDK.js"></script>
+  <script src="scripts/VSS.SDK.js"></script>
+  <script src="scripts/encoding.js"></script>
 </head>
 
 <body>
   <script type="text/javascript">
+    var extResize = function() {
+      var b = document.getElementsByTagName("body")[0];
+      if (b && b.scrollHeight && b.scrollWidth) {
+        VSS.resize();
+      }
+    }
+
     VSS.init({
       usePlatformScripts: true,
       moduleLoaderConfig: {
@@ -16,22 +24,33 @@
         }
       }
     });
+
     VSS.ready(function() {
       require(["scripts/tab"], function() {});
+
+      var c = VSS.getConfiguration();
+
+      c.onViewDisplayed(function() {
+        extResize();
+      });
+
+      c.onReleaseChanged(function(release) {
+        extResize();
+      });
     });
   </script>
   <style>
     html {
-      height=100%;
+      height: 100%;
     }
 
     body {
-      height=100%;
+      height: 100%;
     }
 
     .html-artifact {
       height: 100%;
-      overflow:auto;
+      overflow: auto;
     }
   </style>
   <div class="html-artifact"></div>
