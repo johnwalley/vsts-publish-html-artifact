@@ -1,7 +1,7 @@
 {
   "manifestVersion": 1,
   "id": "publish-html-artifact",
-  "version": "0.2.5",
+  "version": "0.2.7",
   "name": "Publish HTML Artifact",
   "description": "Display an HTML artifact in a build tab",
   "publisher": "johnwalley",
@@ -70,15 +70,7 @@
     }
   }],
   "scopes": [
-    "vso.build",
-    "vso.build_execute",
-    "vso.code",
-    "vso.code_write",
-    "vso.code_manage",
-    "vso.test",
-    "vso.test_write",
-    "vso.work",
-    "vso.work_write"
+    "vso.build_execute"
   ],
   "files": [{
     "path": "html-artifact.html",
